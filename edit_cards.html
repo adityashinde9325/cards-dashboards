@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body>
+
+
+
+    <nav class="fixed top-0 left-0 w-full bg-white text-white shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center md:justify-around justify-between mx-auto p-2">
+            <a href="https://flowbite.com/" class="flex items-center justify-end space-x-3 rtl:space-x-reverse">
+                <img src="img/loog.jpg.png" class="h-8" alt="Flowbite Logo" />
+                <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#9b76ff] ">Digital cards</span> -->
+            </a>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <!-- User Profile Button -->
+            <div class="relative">
+                <button id="userProfileBtn" class="flex items-center space-x-2">
+                    <img class="w-8 h-8 rounded-full" src="img/profile.jpg" alt="User Photo">
+                    <span class="text-gray-800 font-medium hidden md:inline">Bonnie Green</span>
+                    <svg class="w-4 h-4 text-gray-600 hidden md:inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                
+    
+                <!-- Dropdown Menu (Hidden by Default) -->
+                <div id="userDropdown"
+                    class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+                    <div class="p-3 border-b">
+                        <p class="text-sm font-semibold text-gray-800">Bonnie Green</p>
+                        <p class="text-xs text-gray-500">name@flowbite.com</p>
+                    </div>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit Profile</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help Center</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-100">Logout</a>
+                </div>
+            </div>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+                    id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                    </div>
+
+                </div>
+                <button id="sidebarToggle" data-collapse-toggle="navbar-user" type="button"
+                    class="inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="toggle-btn">
+
+            </div>
+        </div>
+    </nav>
+
+    <aside id="cta-button-sidebar"
+        class="fixed top-0 left-0 z-50 w-16 h-screen bg-[#fbfbfb] text-white transition-all duration-300 -translate-x-full md:translate-x-0 hover:w-20 md:hover:w-48 group">
+        <div class="h-full flex flex-col justify-between px-3 py-4 overflow-y-auto">
+            <ul class="space-y-2 font-medium">
+                <li>
+                    <a href="#" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                      
+                        <img class="w-6 h-6 text-gray-300 group-hover:text-white"  src="img/digitize-half.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="space-y-2">
+                    <a href="home.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/home.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Home</span>
+                    </a>
+                    <a href="cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/card.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Cards</span>
+                    </a>
+                    <a href="edit_cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/edit-cards.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Edit Card</span>
+                    </a>
+                    <a href="" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/chart.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Analytics</span>
+                    </a>
+
+                    <a href="leads.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/leads.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Leads</span>
+                    </a>
+                    <a href="share.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/send.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Share</span>
+                    </a>
+                    <a href="profile.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/settings.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Setting</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Logout Button at Bottom -->
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-red-100 group mb-4">
+                <img class="shrink-0 w-5 h-5" src="./img/logout.png">
+                <span class="ml-3 hidden group-hover:block text-[#000000]">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex justify-center p-2 pt-10">
+        <div class="flex flex-col md:flex-row flex-grow max-w-5xl w-full gap-6 mt-6">
+
+            <!-- Edit Screen -->
+            <div id="editSection"
+                class="bg-white shadow-md rounded-lg p-4 w-full md:w-full flex flex-col overflow-y-auto maz-h-full md:max-h-[500px] edit-section scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+
+                <div class="bg-white m-2 m-lg-10 p-3">
+                    <div class="mb-10 font-medium">
+                        <span class="text-2xl"> my digitize card</span>
+                    </div>
+
+                    <h2 class="text-lg font-semibold mb-2">Edit Section</h2>
+
+                    <!-- Avatar Upload -->
+                    <label class="text-sm font-semibold">Card Avatar</label>
+                    <input type="file" id="avatarInput" class="w-full border p-2 rounded mt-2" accept="image/*"
+                        onchange="updatePreview()">
+
+                    <!-- Card Name -->
+                    <label class="text-sm font-semibold mt-2">Card Name (Internal)</label>
+                    <input type="text" id="cardNameInput" class="w-full border p-2 rounded"
+                        placeholder="Enter Card Name" oninput="updatePreview()">
+
+                    <!-- First & Last Name -->
+                    <div class="flex gap-4 mt-2">
+                        <div class="w-1/2">
+                            <label class="text-sm font-semibold">First Name</label>
+                            <input type="text" id="firstNameInput" class="w-full border p-2 rounded"
+                                placeholder="First Name" oninput="updatePreview()">
+                        </div>
+                        <div class="w-1/2">
+                            <label class="text-sm font-semibold">Last Name</label>
+                            <input type="text" id="lastNameInput" class="w-full border p-2 rounded"
+                                placeholder="Last Name" oninput="updatePreview()">
+                        </div>
+                    </div>
+
+                    <!-- Pronouns -->
+                    <label class="text-sm font-semibold mt-2">Pronouns / Accreditation</label>
+                    <input type="text" id="pronounsInput" class="w-full border p-2 rounded"
+                        placeholder="He/Him, She/Her, etc." oninput="updatePreview()">
+
+                    <!-- Office Address -->
+                    <label class="text-sm font-semibold mt-2">Office Address</label>
+                    <textarea id="officeAddressInput" class="w-full border p-2 py-4 rounded" rows="2"
+                        placeholder="Enter Office Address" oninput="updatePreview()"></textarea>
+
+                    <!-- Phone -->
+                    <label class="text-sm font-semibold mt-2">Phone 1 (Mobile)</label>
+                    <input type="text" id="phoneInput" class="w-full border p-2 rounded"
+                        placeholder="Enter Phone Number" oninput="updatePreview()">
+
+                    <!-- Social Links -->
+                    <label class="text-sm font-semibold mt-2">Social Links</label>
+                    <input type="text" id="socialLinksInput" class="w-full border p-2 rounded"
+                        placeholder="Enter Social Links" oninput="updatePreview()">
+
+                    <div class="flex justify-end gap-4">
+                        <button class="text-[#9b76ff] bg-[#e3e4e5] px-6 py-3 my-2 rounded-full font-medium">
+                            Save
+                        </button>
+                        <button class="text-[#9b76ff] bg-[#e3e4e5] px-6 py-2 my-2 rounded-full font-medium">
+                            Share
+                        </button>
+                    </div>
+                    <!-- Preview Button (Mobile Only) -->
+                    <button onclick="togglePreview()"
+                        class="md:hidden mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg">
+                        Preview
+                    </button>
+                </div>
+            </div>
+
+            <!-- Preview Screen (Hidden in Mobile, Visible on Desktop) -->
+            <div id="previewSection"
+                class="  bg-white shadow-md rounded-lg p-4 w-full md:w-1/2 flex flex-col hidden md:flex overflow-y-scroll h-[500px]">
+                <h2 class="text-lg font-semibold">Preview Section</h2>
+                <img id="previewAvatar" class="w-20 h-20 rounded-full mt-2 bg-gray-200" alt="Avatar">
+                <p id="previewCardName" class="text-xl font-bold mt-2">Card Name</p>
+                <p id="previewFirstName" class="text-gray-600 mt-1">First Name Last Name</p>
+                <p id="previewPronouns" class="text-gray-600 mt-1">Pronouns</p>
+                <p id="previewOfficeAddress" class="text-gray-600 mt-1">Office Address</p>
+                <p id="previewPhone" class="text-gray-600 mt-1">Phone</p>
+                <p id="previewSocialLinks" class="text-blue-500 mt-1">Social Links</p>
+
+                <!-- Back Button (Mobile Only) -->
+                <button onclick="togglePreview()" class="md:hidden mt-4 bg-gray-500 text-white px-4 py-2 rounded-lg">
+                    Back to Edit
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+
+
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[#fbfbfb] p-1 shadow-md">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <!-- Left Side: Save Button (50%) -->
+            <div class="w-1/2 flex justify-center">
+                <button class="text-[#9b76ff] bg-[#e3e4e5] px-6 py-2 rounded-full font-medium">
+                    Save
+                </button>
+            </div>
+
+            <!-- Right Side: URL + Icons (50%) -->
+            <div class="w-1/1 flex flex-col md:flex-row items-center justify-end space-x-8">
+                <p class="text-sm hidden md:block text-[#9b76ff] break-words text-center md:text-left">
+                    https://digitize-cards-new-30-1/dashboard/dashborad.html
+                </p>
+                <div class="flex space-x-2">
+                    <div class="p-1  bg-[#e3e4e5] rounded-lg"> <img class="w-6 h-6 cursor-pointer" src="img/copy.png"
+                            alt="Copy Link"> </div>
+                    <div class="p-1  bg-[#e3e4e5] rounded-lg"> <img class="w-7 h-7 cursor-pointer" src="img/qr-code.png"
+                            alt="QR Code"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Preview Button -->
+        <button onclick="togglePreview()"
+            class="fixed bottom-16 left-4 md:hidden bg-[#bababa] text-white px-4 py-2 rounded-lg shadow-lg">
+            <img class="w-6 h-6 cursor-pointer" src="img/back-button.png">
+        </button>
+        <button onclick="togglePreview()"
+            class="fixed bottom-16 right-4 md:hidden bg-[#bababa] text-white px-4 py-2 rounded-lg shadow-lg">
+            <img class="w-6 h-6 cursor-pointer" src="img/right.png">
+        </button>
+    </footer>
+
+
+
+
+
+   
+
+<script src="script.js"> </script>
+</body>
+
+</html>

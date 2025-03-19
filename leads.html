@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="bg-[#f8f9fd]">
+
+
+
+    
+    <nav class="fixed top-0 left-0 w-full z-40 bg-[#fbfbfb] text-white ">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center md:justify-around justify-between mx-auto p-2">
+            <a href="" class="flex items-center justify-end space-x-3 rtl:space-x-reverse">
+                <img src="img/loog.jpg.png" class="h-8" alt="Flowbite Logo" />
+                <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#9b76ff] ">Digital cards</span> -->
+            </a>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <!-- User Profile Button -->
+            <div class="relative ">
+                <button id="userProfileBtn" class="flex items-center space-x-2">
+                    <img class="w-8 h-8 rounded-full" src="img/profile.jpg" alt="User Photo">
+                    <span class="text-gray-800 text-sm hidden md:inline">Bonnie Green</span>
+                    <svg class="w-4 h-4 text-gray-600 hidden md:inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                
+    
+                <!-- Dropdown Menu (Hidden by Default) -->
+                <div id="userDropdown"
+                    class="absolute right-0 mt-2 w-48 bg-white z-50 shadow-lg rounded-lg overflow-hidden hidden">
+                    <div class="p-3 border-b">
+                        <p class="text-sm font-semibold text-gray-800">Bonnie Green</p>
+                        <p class="text-xs text-gray-500">name@flowbite.com</p>
+                    </div>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit Profile</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help Center</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-100">Logout</a>
+                </div>
+            </div>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+                    id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                    </div>
+
+                </div>
+                <button id="sidebarToggle" data-collapse-toggle="navbar-user" type="button"
+                    class="inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="toggle-btn">
+
+            </div>
+        </div>
+    </nav>
+
+    <aside id="cta-button-sidebar"
+    class="fixed top-0 left-0 z-50 w-16 h-screen bg-[#fbfbfb] text-white transition-all duration-300 -translate-x-full md:translate-x-0 hover:w-20 md:hover:w-48 group">
+    <div class="h-full flex flex-col justify-between px-3 py-4 overflow-y-auto">
+        <ul class="space-y-2 font-medium">
+            <li>
+                <a href="#" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                  
+                    <img class="w-6 h-6 text-gray-300 group-hover:text-white"  src="img/digitize-half.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="space-y-2">
+                <a href="home.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/home.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Home</span>
+                </a>
+                <a href="cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/card.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Cards</span>
+                </a>
+                <a href="edit_cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/edit-cards.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Edit Card</span>
+                </a>
+                <a href="" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/chart.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Analytics</span>
+                </a>
+
+                <a href="leads.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/leads.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Leads</span>
+                </a>
+                <a href="share.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/send.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Share</span>
+                </a>
+                <a href="profile.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/settings.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Setting</span>
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- Logout Button at Bottom -->
+        <a href="#" class="flex items-center p-2 rounded-lg hover:bg-red-100 group mb-4">
+            <img class="shrink-0 w-5 h-5" src="./img/logout.png">
+            <span class="ml-3 hidden group-hover:block text-[#000000]">Logout</span>
+        </a>
+    </div>
+</aside>
+
+    <!-- Main Content -->
+    <section class="md:pl-28 py-20 p-4 rounded-lg">
+        <h2 class="text-2xl  text-gray-700 mb-4 font-extrabold">My Leads (Form Submissions)</h2>
+        <h2 class="text-xl  text-gray-700 mb-4 font-bold">Leads</h2>
+        <button class="bg-[#24273e] hover:bg-[#1a1c2d] transition duration-300 rounded-[28px] px-4 py-2 my-4 text-white font-medium shadow-md">
+            Download CSV
+        </button>
+        
+        <div class="overflow-x-auto">
+            <table class="w-full min-w-[600px] border-collapse">
+                <thead class="bg-[#ffffff] text-gray-700 text-xs md:text-sm">
+                    <tr class="text-left">
+                        <th class="px-3 py-2">Full Name</th>
+                        <th class="px-3 py-2">Company</th>
+                        <th class="px-3 py-2">Email</th>
+                        <th class="px-3 py-2">Phone</th>
+                        <th class="px-3 py-2">Action</th>
+                        <th class="px-3 py-2">Date</th>
+                    </tr>
+                </thead>
+                <tbody class="text-xs md:text-sm space-y-2">
+                    <tr class="bg-[#ffffff] rounded-lg shadow-sm hover:bg-gray-200">
+                        <td class="px-3 py-3">John Doe</td>
+                        <td class="px-3 py-3">Tech Corp</td>
+                        <td class="px-3 py-3">johndoe@example.com</td>
+                        <td class="px-3 py-3">+123 456 7890</td>
+                        <td class="px-3 py-3 text-center flex space-x-2">
+
+
+                            <div class="p-1 md:p-2 bg-[#f8f9fd] rounded-lg"> <img class="w-5 h-5  shrink-0 cursor-pointer"
+                                    src="img/view.png"> </div>
+                            <div class="p-1 md:p-2 bg-[#f8f9fd] rounded-lg"><img class=" w-5 h-5  shrink-0  cursor-pointer"
+                                    src="img/edit-text.png"> </div>
+                            <div class="p-1 md:p-2 bg-[#f8f9fd] rounded-lg"><img class="w-5 h-5 shrink-0 cursor-pointer"
+                                    src="img/delete.png"> </div>
+                        </td>
+
+                        <td class="px-3 py-3">2025-03-10</td>
+                    </tr>
+                    <tr class="bg-[#ffffff] rounded-lg shadow-sm hover:bg-gray-200">
+                        <td class="px-3 py-3">Jane Smith</td>
+                        <td class="px-3 py-3">Design Inc</td>
+                        <td class="px-3 py-3">janesmith@example.com</td>
+                        <td class="px-3 py-3">+987 654 3210</td>
+                        <td class="px-3 py-3 text-center flex space-x-2">
+                            <div class="p-2 bg-[#f8f9fd] rounded-lg"> <img class="w-5 h-5 shrink-0 cursor-pointer"
+                                    src="img/view.png"> </div>
+                            <div class="p-2 bg-[#f8f9fd] rounded-lg"><img class="w-5 h-5 shrink-0 cursor-pointer"
+                                    src="img/edit-text.png"> </div>
+                            <div class="p-2 bg-[#f8f9fd] rounded-lg"><img class="w-5 h-5 shrink-0 cursor-pointer"
+                                    src="img/delete.png"> </div>
+                        </td>
+                        <td class="px-3 py-3">2025-03-09</td>
+                    </tr>
+                    <tr class="bg-[#ffffff] rounded-lg shadow-sm hover:bg-gray-200">
+                        <td class="px-3 py-3">Jane Smith</td>
+                        <td class="px-3 py-3">Design Inc</td>
+                        <td class="px-3 py-3">janesmith@example.com</td>
+                        <td class="px-3 py-3">+987 654 3210</td>
+                        <td class="px-3 py-3 text-center flex space-x-2">
+                            <div class="p-2 bg-[#f8f9fd] rounded-lg"> <img class="w-5 h-5 shrink-0 cursor-pointer"
+                                    src="img/view.png"> </div>
+                            <div class="p-2 bg-[#f8f9fd] rounded-lg"><img class="w-5 h-5 shrink-0 cursor-pointer"
+                                    src="img/edit-text.png"> </div>
+                            <div class="p-2 bg-[#f8f9fd] rounded-lg"><img class="w-5 h-5 shrink-0 cursor-pointer"
+                                    src="img/delete.png"> </div>
+                        </td>
+                        <td class="px-3 py-3">2025-03-09</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+        function updatePreview() {
+            document.getElementById("previewCardName").innerText = document.getElementById("cardNameInput").value || "Card Name";
+            document.getElementById("previewFirstName").innerText = (document.getElementById("firstNameInput").value + " " + document.getElementById("lastNameInput").value).trim() || "First Name Last Name";
+            document.getElementById("previewPronouns").innerText = document.getElementById("pronounsInput").value || "Pronouns";
+            document.getElementById("previewOfficeAddress").innerText = document.getElementById("officeAddressInput").value || "Office Address";
+            document.getElementById("previewPhone").innerText = document.getElementById("phoneInput").value || "Phone";
+            document.getElementById("previewSocialLinks").innerText = document.getElementById("socialLinksInput").value || "Social Links";
+
+            let avatarInput = document.getElementById("avatarInput").files[0];
+            if (avatarInput) {
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById("previewAvatar").src = e.target.result;
+                }
+                reader.readAsDataURL(avatarInput);
+            }
+        }
+
+        function togglePreview() {
+            let previewSection = document.getElementById("previewSection");
+            let editSection = document.getElementById("editSection");
+
+            // Only toggle in mobile view
+            if (window.innerWidth < 768) {
+                previewSection.classList.toggle("hidden");
+                editSection.classList.toggle("hidden");
+            }
+        }
+    </script>
+
+
+
+
+<footer class="fixed bottom-0 left-0 w-full bg-[#fbfbfb] p-3 shadow-md">
+    <div class="w-full mx-auto flex items-center justify-between">
+        <!-- Left Side: Save Button (50%) -->
+        
+    </div>
+  
+</footer>
+
+
+
+
+
+    <script>
+        const sidebar = document.getElementById('cta-button-sidebar');
+        const toggleBtn = document.getElementById('sidebarToggle');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+    </script>
+
+
+</body>
+
+</html>

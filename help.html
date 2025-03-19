@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="bg-[#f8f9fd]">
+
+
+
+  <nav class="fixed top-0 left-0 w-full z-40 bg-[#fbfbfb] text-white ">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center md:justify-around justify-between mx-auto p-2">
+      <a href="" class="flex items-center justify-end space-x-3 rtl:space-x-reverse">
+        <img src="img/loog.jpg.png" class="h-8" alt="Flowbite Logo" />
+        <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#9b76ff] ">Digital cards</span> -->
+      </a>
+      <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <!-- User Profile Button -->
+        <div class="relative ">
+          <button id="userProfileBtn" class="flex items-center space-x-2">
+            <img class="w-8 h-8 rounded-full" src="img/profile.jpg" alt="User Photo">
+            <span class="text-gray-800 text-sm hidden md:inline">Bonnie Green</span>
+            <svg class="w-4 h-4 text-gray-600 hidden md:inline" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+
+          <!-- Dropdown Menu (Hidden by Default) -->
+          <div id="userDropdown"
+            class="absolute right-0 mt-2 w-48 bg-white z-50 shadow-lg rounded-lg overflow-hidden hidden">
+            <div class="p-3 border-b">
+              <p class="text-sm font-semibold text-gray-800">Bonnie Green</p>
+              <p class="text-xs text-gray-500">name@flowbite.com</p>
+            </div>
+            <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit Profile</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help Center</a>
+            <a class=" logout-btn block px-4 py-2 text-sm text-red-600 hover:bg-red-100">Logout</a>
+          </div>
+        </div>
+        <!-- Dropdown menu -->
+        <div
+          class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+          id="user-dropdown">
+          <div class="px-4 py-3">
+            <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+            <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+          </div>
+
+        </div>
+        <button id="sidebarToggle" data-collapse-toggle="navbar-user" type="button"
+          class="inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-user" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="toggle-btn">
+
+      </div>
+    </div>
+  </nav>
+
+  <aside id="cta-button-sidebar"
+    class="fixed top-0 left-0 z-50 w-16 h-screen bg-[#fbfbfb] text-white transition-all duration-300 -translate-x-full md:translate-x-0 hover:w-20 md:hover:w-48 group">
+    <div class="h-full flex flex-col justify-between px-3 py-4 overflow-y-auto">
+      <ul class="space-y-2 font-medium">
+        <li>
+          <a href="#" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+
+            <img class="w-6 h-6 text-gray-300 group-hover:text-white" src="img/digitize-half.png">
+            <span class="ml-3 hidden group-hover:block text-[#000000]">Dashboard</span>
+          </a>
+        </li>
+
+        <li class="space-y-2">
+          <a href="home.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+            <img class="shrink-0 w-5 h-5" src="./img/home.png">
+            <span class="ml-3 hidden group-hover:block text-[#000000]">Home</span>
+          </a>
+          <a href="cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+            <img class="shrink-0 w-5 h-5" src="./img/card.png">
+            <span class="ml-3 hidden group-hover:block text-[#000000]">Cards</span>
+          </a>
+          <a href="edit_cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+            <img class="shrink-0 w-5 h-5" src="./img/edit-cards.png">
+            <span class="ml-3 hidden group-hover:block text-[#000000]">Edit Card</span>
+          </a>
+          <a href="" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+            <img class="shrink-0 w-5 h-5" src="./img/chart.png">
+            <span class="ml-3 hidden group-hover:block text-[#000000]">Analytics</span>
+          </a>
+
+          <a href="leads.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+            <img class="shrink-0 w-5 h-5" src="./img/leads.png">
+            <span class="ml-3 hidden group-hover:block text-[#000000]">Leads</span>
+          </a>
+          <a href="share.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+            <img class="shrink-0 w-5 h-5" src="./img/send.png">
+            <span class="ml-3 hidden group-hover:block text-[#000000]">Share</span>
+          </a>
+          <a href="profile.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+            <img class="shrink-0 w-5 h-5" src="./img/settings.png">
+            <span class="ml-3 hidden group-hover:block text-[#000000]">Setting</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- Logout Button at Bottom -->
+      <a class=" logout-btn flex items-center p-2 rounded-lg hover:bg-red-100 group mb-4">
+        <img class="shrink-0 w-5 h-5" src="./img/logout.png">
+        <span class="ml-3 hidden group-hover:block text-[#000000]">Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <div class="max-w-5xl mx-auto p-6 my-20 bg-[#ffffff] rounded-3xl">
+    <h2 class="text-2xl font-semibold mb-4">Contact and Support</h2>
+    <p class="mb-4">We're here to help! If you can't find the answer you're looking for in our FAQs or articles, please reach out to our support team.</p>
+  
+    <div class="mb-6">
+      <h3 class="text-lg font-medium mb-2">Need Immediate Assistance?</h3>
+      <p class="mb-2">
+        <span class="font-semibold">Phone Support:</span>
+        +91 (9867765455)
+      </p>
+      <p class="mb-2">
+        Available Monday - Friday, [IST] [10AM-6PM]
+      </p>
+      </div>
+  
+    <div class="mb-6">
+      <h3 class="text-lg font-medium mb-2">Email Support:</h3>
+      <p class="mb-2">
+        <span class="font-semibold">Email Us:</span>
+        <a href="mailto:support@[yourdomain].com" class="text-blue-600 hover:underline">support@digitizecards.com</a>
+      </p>
+      <p class="mb-2">Please provide as much detail as possible about your issue, including screenshots or error messages if applicable. We aim to respond within 24-48 business hours.</p>
+    </div>
+  
+    <div class="mb-6 ">
+      <h3 class="text-lg font-medium mb-2">Submit a Ticket:</h3>
+      <form class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Your Name:</label>
+          <input type="text" id="name" name="name" class="mt-1 py-2 block w-full border-gray-300 rounded-3xl shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Your Email Address:</label>
+          <input type="email" id="email" name="email" class="mt-1 py-2 block w-full border-gray-300 rounded-3xl shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="subject" class="block text-sm font-medium text-gray-700">Subject:</label>
+          <input type="text" id="subject" name="subject" class="mt-1 py-2 block w-full border-gray-300 rounded-3xl shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="description" class="block text-sm font-medium text-gray-700">Description of Issue:</label>
+          <textarea id="description" name="description" rows="4" class="mt-1 py-2 block w-full border-gray-300 rounded-3xl shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+        </div>
+        <div>
+          <label for="attachment" class="block text-sm font-medium py-2 text-gray-700">Attach Files (Optional):</label>
+          <input type="file" id="attachment" name="attachment" class="mt-1 block w-full">
+        </div>
+        <div>
+          <button type="submit" class="w-100  flex justify-center py-2 px-4 border border-transparent rounded-3xl shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+        </div>
+      </form>
+    </div>
+  
+    <div class="mb-6">
+       
+    
+        <!-- FAQs Section -->
+        <div class="mt-6 max-w-6xl mx-auto">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
+            <div class="space-y-4">
+                <div class="faq-item bg-white p-3 rounded-lg shadow-md">
+                    <button class="faq-toggle flex justify-between items-center w-full text-md font-medium  focus:outline-none" data-target="faq1">
+                        <span>How can I edit my profile information?</span>
+                        <span class="arrow transition-transform transform rotate-0">▼</span>
+                    </button>
+                    <p id="faq1" class="faq-content hidden text-sm  mt-2 text-gray-700">
+                        You can edit your profile information by navigating to the "Profile" section, clicking the "Edit" button, making your changes, and saving them.
+                    </p>
+                </div>
+        
+                <div class="faq-item bg-white p-3 rounded-lg shadow-md">
+                    <button class="faq-toggle flex justify-between items-center w-full text-md font-medium  focus:outline-none" data-target="faq2">
+                        <span>How do I change my password?</span>
+                        <span class="arrow transition-transform transform rotate-0">▼</span>
+                    </button>
+                    <p id="faq2" class="faq-content hidden mt-2 text-sm text-gray-700">
+                        To change your password, go to "Account Settings," select "Change Password," enter your current and new passwords, then save the changes.
+                    </p>
+                </div>
+        
+                <div class="faq-item bg-white p-3 rounded-lg shadow-md">
+                    <button class="faq-toggle flex justify-between items-center w-full text-md font-medium  focus:outline-none" data-target="faq3">
+                        <span>Can I update my phone number?</span>
+                        <span class="arrow transition-transform transform rotate-0">▼</span>
+                    </button>
+                    <p id="faq3" class="faq-content hidden mt-2 text-sm text-gray-700">
+                        Yes, you can update your phone number in the "Profile" section under "Contact Information."
+                    </p>
+                </div>
+        
+                <div class="faq-item bg-white p-3 rounded-lg shadow-md">
+                    <button class="faq-toggle flex justify-between items-center w-full text-md font-medium  focus:outline-none" data-target="faq4">
+                        <span>How do I change my profile picture?</span>
+                        <span class="arrow transition-transform transform rotate-0">▼</span>
+                    </button>
+                    <p id="faq4" class="faq-content hidden mt-2 text-sm text-gray-700">
+                        To change your profile picture, go to your profile, click on the current picture, upload a new one, and save it.
+                    </p>
+                </div>
+        
+                <div class="faq-item bg-white p-3 rounded-lg shadow-md">
+                    <button class="faq-toggle flex justify-between items-center w-full text-md font-medium focus:outline-none" data-target="faq5">
+                        <span>What should I do if I forget my login details?</span>
+                        <span class="arrow transition-transform transform rotate-0">▼</span>
+                    </button>
+                    <p id="faq5" class="faq-content hidden mt-2 text-sm text-gray-700">
+                        Click on "Forgot Password" on the login page and follow the instructions to reset your password.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const target = document.getElementById(button.getAttribute('data-target'));
+                target.classList.toggle('hidden');
+            });
+        });
+    </script>
+    
+  
+    <div>
+      <h3 class="text-lg font-medium mb-2">Important Notes:</h3>
+      <p class="mb-2">When submitting a ticket or sending an email, please include your account email address and any relevant card IDs to help us assist you faster.</p>
+      <p>Please check your spam/junk folder for replies.</p>
+    </div>
+  </div>
+
+
+
+ 
+
+  <footer class="fixed bottom-0 left-0 w-full bg-[#fbfbfb] p-3 shadow-md">
+    <div class="w-full mx-auto flex items-center justify-between">
+        <!-- Left Side: Save Button (50%) -->
+        
+    </div>
+  
+</footer>
+
+ 
+
+
+
+
+
+  <script src="script.js"> </script>
+</body>
+
+</html>

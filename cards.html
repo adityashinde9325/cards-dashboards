@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body>
+
+
+
+    <nav class="fixed top-0 left-0 w-full z-40 bg-white text-white shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center md:justify-around justify-between mx-auto p-2">
+            <a href="https://flowbite.com/" class="flex items-center justify-end space-x-3 rtl:space-x-reverse">
+                <img src="img/loog.jpg.png" class="h-8" alt="Flowbite Logo" />
+                <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#9b76ff] ">Digital cards</span> -->
+            </a>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <!-- User Profile Button -->
+                <div class="relative">
+                    <button id="userProfileBtn" class="flex items-center space-x-2">
+                        <img class="w-8 h-8 rounded-full" src="img/profile.jpg" alt="User Photo">
+                        <span class="text-gray-800 font-medium hidden md:inline">Bonnie Green</span>
+                        <svg class="w-4 h-4 text-gray-600 hidden md:inline" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+
+                    <!-- Dropdown Menu (Hidden by Default) -->
+                    <div id="userDropdown"
+                        class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+                        <div class="p-3 border-b">
+                            <p class="text-sm font-semibold text-gray-800">Bonnie Green</p>
+                            <p class="text-xs text-gray-500">name@flowbite.com</p>
+                        </div>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit Profile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help Center</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-100">Logout</a>
+                    </div>
+                </div>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+                    id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                    </div>
+
+                </div>
+                <button id="sidebarToggle" data-collapse-toggle="navbar-user" type="button"
+                    class="inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="toggle-btn">
+
+            </div>
+        </div>
+    </nav>
+
+    <aside id="cta-button-sidebar"
+    class="fixed top-0 left-0 z-50 w-16 h-screen bg-[#fbfbfb] text-white transition-all duration-300 -translate-x-full md:translate-x-0 hover:w-20 md:hover:w-48 group">
+    <div class="h-full flex flex-col justify-between px-3 py-4 overflow-y-auto">
+        <ul class="space-y-2 font-medium">
+            <li>
+                <a href="#" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                  
+                    <img class="w-6 h-6 text-gray-300 group-hover:text-white"  src="img/digitize-half.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="space-y-2">
+                <a href="home.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/home.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Home</span>
+                </a>
+                <a href="cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/card.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Cards</span>
+                </a>
+                <a href="edit_cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/edit-cards.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Edit Card</span>
+                </a>
+                <a href="" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/chart.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Analytics</span>
+                </a>
+
+                <a href="leads.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/leads.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Leads</span>
+                </a>
+                <a href="share.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/send.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Share</span>
+                </a>
+                <a href="profile.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                    <img class="shrink-0 w-5 h-5" src="./img/settings.png">
+                    <span class="ml-3 hidden group-hover:block text-[#000000]">Setting</span>
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- Logout Button at Bottom -->
+        <a href="#" class="flex items-center p-2 rounded-lg hover:bg-red-100 group mb-4">
+            <img class="shrink-0 w-5 h-5" src="./img/logout.png">
+            <span class="ml-3 hidden group-hover:block text-[#000000]">Logout</span>
+        </a>
+    </div>
+</aside>
+
+    <!-- Main Content -->
+    <section class="max-w-6xl mx-auto p-10 md:p-20">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Dashboard</h2>
+
+        <!-- Image Grid -->
+        <div class="grid md:grid-cols-3 grid-cols-2 gap-4">
+
+            <div class="group ">
+                <!-- Outer iPhone Frame -->
+                <div class="relative border-3 border-[#dbdbdb] rounded-[50px] shadow-lg  bg-gray-200">
+                    
+                    <!-- Inner Black Screen Frame -->
+                    <div class="relative border-8 border-black rounded-[50px] overflow-hidden bg-black ">
+                        
+                        <!-- Dynamic Island -->
+                        <div class="absolute left-26 top-2 justify-center w-22 h-6 bg-[#000000] rounded-full mx-auto  flex items-center justify-center shadow-md">
+                            <!-- Camera (Centered) -->
+                            <div class="absolute w-2.5 h-2.5 bg-black  border border-gray-700 rounded-full left-1/2 transform -translate-x-1/2"></div>
+                            <!-- Notification Text -->
+                        </div>
+            
+                        <!-- Card Content -->
+                        <div class="bg-gradient-to-br  from-purple-500 to-red-500 text-white rounded-[40px] py-20  ">
+                            <!-- Profile Image -->
+                            <div class="flex justify-center">
+                                <div class="relative w-24 h-24 border-4 border-white rounded-xl overflow-hidden">
+                                    <img src="img/profile.jpg" alt="User" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+            
+                            <!-- Name & Title -->
+                            <div class="text-center mt-4">
+                                <h2 class="text-xl font-bold">Smita Pawar</h2>
+                                <p class="text-sm">FOUNDER & CEO</p>
+                            </div>
+            
+                            <!-- Social Media Icons -->
+                            <div class="flex justify-center gap-4 mt-4">
+                                <img src="img/linkedin.png" alt="LinkedIn" class="w-6 h-6">
+                                <img src="img/twitter.png" alt="Twitter" class="w-6 h-6">
+                                <img src="img/instagram.png" alt="Instagram" class="w-6 h-6">
+                                <img src="img/facebook.png" alt="Facebook" class="w-6 h-6">
+                            </div>
+            
+                            <!-- About Me -->
+                            <div class="mt-6 px-2">
+                                <h3 class="text-lg font-semibold">About Me</h3>
+                                <p class="text-sm leading-5">I'm a highly skilled marketing professional with over 7 years of industry experience.</p>
+                            </div>
+            
+                            <!-- QR Code -->
+                            <div class="flex justify-center mt-4">
+                                <img src="img/qrcode.png" alt="QR Code" class="w-20 h-20 rounded-lg border-2 border-white">
+                            </div>
+            
+                            <!-- Contact Info -->
+                            <div class="mt-6 space-y-2 text-sm">
+                                <div class="flex items-center gap-2">
+                                    <img src="img/location.png" alt="Location" class="w-5 h-5">
+                                    <span>1234 Maple Street Springfield, IL 62701</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="img/email.png" alt="Email" class="w-5 h-5">
+                                    <span>smita.pawar12@gmail.com</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="img/phone.png" alt="Phone" class="w-5 h-5">
+                                    <span>(555) 567-8901</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="img/web.png" alt="Website" class="w-5 h-5">
+                                    <span>www.smitapawar.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Preview Button -->
+                <div class="flex my-3 items-center justify-center">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-3xl transition">
+                        See Preview
+                    </button>
+                </div>
+            </div>
+            
+
+
+            <div class=" group">
+                <img src="img/cards/2.png" alt="Image 2" class="w-full  object-cover rounded-lg ">
+                <div class=" inset-0 flex my-3 items-center justify-center">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-3xl  transition">
+                        See Preview
+                    </button>
+                </div>
+            </div>
+            <div class=" group">
+                <img src="img/cards/3.png" alt="Image 3" class="w-full  object-cover rounded-lg ">
+                <div class=" inset-0 flex my-3 items-center justify-center">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-3xl  transition">
+                        See Preview
+                    </button>
+                </div>
+            </div>
+            <div class=" group">
+                <img src="img/cards/4.png" alt="Image 4" class="w-full  object-cover rounded-lg ">
+                <div class=" inset-0 flex my-3 items-center justify-center">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-3xl  transition">
+                        See Preview
+                    </button>
+                </div>
+            </div>
+            <div class=" group">
+                <img src="img/cards/2.png" alt="Image 5" class="w-full  object-cover rounded-lg ">
+                <div class=" inset-0 flex my-3 items-center justify-center">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-3xl  transition">
+                        See Preview
+                    </button>
+                </div>
+            </div>
+            <div class=" group">
+                <img src="img/cards/1.png" alt="Image 5" class="w-full  object-cover rounded-lg ">
+                <div class=" inset-0 flex my-3 items-center justify-center">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-3xl  transition">
+                        See Preview
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[#fbfbfb] p-3 shadow-md">
+        <div class="w-full mx-auto flex items-center justify-between">
+            <!-- Left Side: Save Button (50%) -->
+            
+        </div>
+      
+    </footer>
+
+
+
+
+
+
+
+    <script src="script.js"> </script>
+</body>
+
+</html>

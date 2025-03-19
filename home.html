@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="bg-[#f8f9fd]">
+
+
+
+    <nav class="fixed top-0 left-0 w-full z-40 bg-[#fbfbfb] text-white ">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center md:justify-around justify-between mx-auto p-2">
+            <a href="" class="flex items-center justify-end space-x-3 rtl:space-x-reverse">
+                <img src="img/loog.jpg.png" class="h-8" alt="Flowbite Logo" />
+                <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#9b76ff] ">Digital cards</span> -->
+            </a>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <!-- User Profile Button -->
+            <div class="relative ">
+                <button id="userProfileBtn" class="flex items-center space-x-2">
+                    <img class="w-8 h-8 rounded-full" src="img/profile.jpg" alt="User Photo">
+                    <span class="text-gray-800 text-sm hidden md:inline">Bonnie Green</span>
+                    <svg class="w-4 h-4 text-gray-600 hidden md:inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                
+    
+                <!-- Dropdown Menu (Hidden by Default) -->
+                <div id="userDropdown"
+                    class="absolute right-0 mt-2 w-48 bg-white z-50 shadow-lg rounded-lg overflow-hidden hidden">
+                    <div class="p-3 border-b">
+                        <p class="text-sm font-semibold text-gray-800">Bonnie Green</p>
+                        <p class="text-xs text-gray-500">name@flowbite.com</p>
+                    </div>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit Profile</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help Center</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-100">Logout</a>
+                </div>
+            </div>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+                    id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                    </div>
+
+                </div>
+                <button id="sidebarToggle" data-collapse-toggle="navbar-user" type="button"
+                    class="inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="toggle-btn">
+
+            </div>
+        </div>
+    </nav>
+
+    <aside id="cta-button-sidebar"
+        class="fixed top-0 left-0 z-50 w-16 h-screen bg-[#fbfbfb] text-white transition-all duration-300 -translate-x-full md:translate-x-0 hover:w-20 md:hover:w-48 group">
+        <div class="h-full flex flex-col justify-between px-3 py-4 overflow-y-auto">
+            <ul class="space-y-2 font-medium">
+                <li>
+                    <a href="#" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                      
+                        <img class="w-6 h-6 text-gray-300 group-hover:text-white"  src="img/digitize-half.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="space-y-2">
+                    <a href="home.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/home.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Home</span>
+                    </a>
+                    <a href="cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/card.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Cards</span>
+                    </a>
+                    <a href="edit_cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/edit-cards.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Edit Card</span>
+                    </a>
+                    <a href="" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/chart.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Analytics</span>
+                    </a>
+
+                    <a href="leads.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/leads.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Leads</span>
+                    </a>
+                    <a href="share.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/send.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Share</span>
+                    </a>
+                    <a href="profile.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/settings.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Setting</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Logout Button at Bottom -->
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-red-100 group mb-4">
+                <img class="shrink-0 w-5 h-5" src="./img/logout.png">
+                <span class="ml-3 hidden group-hover:block text-[#000000]">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-1  md:ml-20 ml-0 mt-20 p-4 mb-10 ">
+        <h1 class="text-2xl font-semibold mb-4">Dashboard</h1>
+  
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-[#edfafa] p-4 rounded-2xl shadow">
+            <h2 class="text-lg font-semibold mb-2">Views</h2>
+            <p class="text-2xl font-semibold">1200</p>
+          </div>
+          <div class="bg-[#f6f5ff] p-4 rounded-2xl shadow">
+            <h2 class="text-lg font-semibold mb-2">Clicks</h2>
+            <p class="text-2xl font-semibold">5,000</p>
+          </div>
+          <div class="bg-[#eff6ff] p-4 rounded-2xl shadow">
+            <h2 class="text-lg font-semibold mb-2">CTR</h2>
+            <p class="text-2xl font-semibold">50</p>
+          </div>
+          <div class="bg-[#faf0ed] p-4 rounded-2xl shadow">
+            <h2 class="text-lg font-semibold mb-2">leads</h2>
+            <p class="text-2xl font-semibold">15</p>
+          </div>
+        </div>
+  
+        <div class="mt-8">
+         
+            <div class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 ">
+                <div class="relative mx-4 mt-4 flex flex-col gap-4 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none md:flex-row md:items-center">
+                  <div class="w-max rounded-lg bg-gray-900 p-5 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                      class="h-6 w-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h6 class="block font-sans text-base font-semibold leading-relaxed tracking-normal text-blue-gray-900 antialiased">
+                      Line Chart
+                    </h6>
+                    <p class="block max-w-sm font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
+                      Visualize your data in a simple way using the
+                      @material-tailwind/html chart plugin.
+                    </p>
+                  </div>
+                </div>
+                <div class="pt-6 px-2 pb-0">
+                  <div id="bar-chart"></div>
+                </div>
+              </div>
+               
+              <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+              <script>
+              const chartConfig = {
+                series: [
+                  {
+                    name: "Sales",
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                  },
+                ],
+                chart: {
+                  type: "bar",
+                  height: 240,
+                  toolbar: {
+                    show: false,
+                  },
+                },
+                title: {
+                  show: "",
+                },
+                dataLabels: {
+                  enabled: false,
+                },
+                colors: ["#020617"],
+                plotOptions: {
+                  bar: {
+                    columnWidth: "40%",
+                    borderRadius: 2,
+                  },
+                },
+                xaxis: {
+                  axisTicks: {
+                    show: false,
+                  },
+                  axisBorder: {
+                    show: false,
+                  },
+                  labels: {
+                    style: {
+                      colors: "#616161",
+                      fontSize: "12px",
+                      fontFamily: "inherit",
+                      fontWeight: 400,
+                    },
+                  },
+                  categories: [
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
+                  ],
+                },
+                yaxis: {
+                  labels: {
+                    style: {
+                      colors: "#616161",
+                      fontSize: "12px",
+                      fontFamily: "inherit",
+                      fontWeight: 400,
+                    },
+                  },
+                },
+                grid: {
+                  show: true,
+                  borderColor: "#dddddd",
+                  strokeDashArray: 5,
+                  xaxis: {
+                    lines: {
+                      show: true,
+                    },
+                  },
+                  padding: {
+                    top: 5,
+                    right: 20,
+                  },
+                },
+                fill: {
+                  opacity: 0.8,
+                },
+                tooltip: {
+                  theme: "dark",
+                },
+              };
+               
+              const chart = new ApexCharts(document.querySelector("#bar-chart"), chartConfig);
+               
+              chart.render();
+              </script>
+  
+        </div>
+        <section class="md:ml-0 bg-[#ffffff] ml-0 mt-10 p-4 rounded-2xl">
+            <h2 class="text-2xl  text-gray-700 mb-4 font-extrabold"> Letest Leads</h2>
+            
+            <button class="bg-[#24273e] hover:bg-[#1a1c2d] transition duration-300 rounded-[28px] px-4 py-2 my-4 text-white font-medium shadow-md">
+                View All Leads
+            </button>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full min-w-[600px] border-collapse">
+                    <thead class="bg-[#ffffff] text-gray-700 text-xs md:text-sm">
+                        <tr class="text-left">
+                            <th class="px-3 py-2">Full Name</th>
+                            <th class="px-3 py-2">Company</th>
+                            <th class="px-3 py-2">Email</th>
+                            <th class="px-3 py-2">Phone</th>
+                            <th class="px-3 py-2">Action</th>
+                            <th class="px-3 py-2">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs md:text-sm space-y-2">
+                        <tr class="bg-[#ffffff] rounded-lg shadow-sm hover:bg-gray-200">
+                            <td class="px-3 py-3">John Doe</td>
+                            <td class="px-3 py-3">Tech Corp</td>
+                            <td class="px-3 py-3">johndoe@example.com</td>
+                            <td class="px-3 py-3">+123 456 7890</td>
+                            <td class="px-3 py-3 text-center flex space-x-2">
+    
+    
+                                <div class="p-1 md:p-2 bg-[#f8f9fd] rounded-lg"> <img class="w-5 h-5  shrink-0 cursor-pointer"
+                                        src="img/view.png"> </div>
+                                <div class="p-1 md:p-2 bg-[#f8f9fd] rounded-lg"><img class=" w-5 h-5  shrink-0  cursor-pointer"
+                                        src="img/edit-text.png"> </div>
+                                <div class="p-1 md:p-2 bg-[#f8f9fd] rounded-lg"><img class="w-5 h-5 shrink-0 cursor-pointer"
+                                        src="img/delete.png"> </div>
+                            </td>
+    
+                            <td class="px-3 py-3">2025-03-10</td>
+                        </tr>
+                        <tr class="bg-[#ffffff] rounded-lg shadow-sm hover:bg-gray-200">
+                            <td class="px-3 py-3">Jane Smith</td>
+                            <td class="px-3 py-3">Design Inc</td>
+                            <td class="px-3 py-3">janesmith@example.com</td>
+                            <td class="px-3 py-3">+987 654 3210</td>
+                            <td class="px-3 py-3 text-center flex space-x-2">
+                                <div class="p-2 bg-[#f8f9fd] rounded-lg"> <img class="w-5 h-5 shrink-0 cursor-pointer"
+                                        src="img/view.png"> </div>
+                                <div class="p-2 bg-[#f8f9fd] rounded-lg"><img class="w-5 h-5 shrink-0 cursor-pointer"
+                                        src="img/edit-text.png"> </div>
+                                <div class="p-2 bg-[#f8f9fd] rounded-lg"><img class="w-5 h-5 shrink-0 cursor-pointer"
+                                        src="img/delete.png"> </div>
+                            </td>
+                            <td class="px-3 py-3">2025-03-09</td>
+                        </tr>
+                        <tr class="bg-[#ffffff] rounded-lg shadow-sm hover:bg-gray-200">
+                            <td class="px-3 py-3">Jane Smith</td>
+                            <td class="px-3 py-3">Design Inc</td>
+                            <td class="px-3 py-3">janesmith@example.com</td>
+                            <td class="px-3 py-3">+987 654 3210</td>
+                            <td class="px-3 py-3 text-center flex space-x-2">
+                                <div class="p-2 bg-[#f8f9fd] rounded-lg"> <img class="w-5 h-5 shrink-0 cursor-pointer"
+                                        src="img/view.png"> </div>
+                                <div class="p-2 bg-[#f8f9fd] rounded-lg"><img class="w-5 h-5 shrink-0 cursor-pointer"
+                                        src="img/edit-text.png"> </div>
+                                <div class="p-2 bg-[#f8f9fd] rounded-lg"><img class="w-5 h-5 shrink-0 cursor-pointer"
+                                        src="img/delete.png"> </div>
+                            </td>
+                            <td class="px-3 py-3">2025-03-09</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    
+  
+      </main>
+
+    
+
+
+
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[#fbfbfb] p-3 shadow-md">
+        <div class="w-full mx-auto flex items-center justify-between">
+            <!-- Left Side: Save Button (50%) -->
+            
+        </div>
+      
+    </footer>
+
+
+
+
+
+   
+
+<script src="script.js"> </script>
+</body>
+
+</html>

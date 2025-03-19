@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen">
+
+  <nav class="bg-gray-800 p-4 text-white flex justify-between items-center fixed top-0 w-full z-10">
+    <div class="text-lg font-semibold">Dashboard</div>
+    <div class="flex items-center space-x-4">
+      <button class="hover:text-gray-300">Profile</button>
+      <button class="hover:text-gray-300">Settings</button>
+    </div>
+  </nav>
+
+  <div class="flex h-full pt-16">
+    <aside id="sidebar" class="bg-gray-700 text-white h-full fixed top-16 transition-all duration-300 w-30">
+      <button id="sidebar-toggle" class="absolute top-4 right-2 p-2 bg-gray-600 rounded-full hover:bg-gray-500">
+        &lt;
+      </button>
+      <ul class="p-4 space-y-2">
+        <li class="hover:bg-gray-600 p-2 rounded">Dashboard</li>
+        <li class="hover:bg-gray-600 p-2 rounded">Users</li>
+        <li class="hover:bg-gray-600 p-2 rounded">Reports</li>
+        </ul>
+    </aside>
+
+    <main id="main-content" class="flex-1 overflow-y-auto ml-64 mt-0 p-4">
+        <h1 class="text-2xl font-semibold mb-4">Dashboard</h1>
+  
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-white p-4 rounded shadow">
+            <h2 class="text-lg font-semibold mb-2">Total Users</h2>
+            <p class="text-3xl">1200</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow">
+            <h2 class="text-lg font-semibold mb-2">Total Sales</h2>
+            <p class="text-3xl">$50,000</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow">
+            <h2 class="text-lg font-semibold mb-2">New Orders</h2>
+            <p class="text-3xl">50</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow">
+            <h2 class="text-lg font-semibold mb-2">Pending Tasks</h2>
+            <p class="text-3xl">15</p>
+          </div>
+        </div>
+  
+        <div class="mt-8">
+          <p>Additional main content...</p>
+        </div>
+  
+      </main>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const mainContent = document.getElementById('main-content');
+
+    sidebarToggle.addEventListener('click', () => {
+      if (sidebar.classList.contains('w-64')) {
+        sidebar.classList.remove('w-64');
+        sidebar.classList.add('w-16');
+        mainContent.classList.remove('ml-64');
+        mainContent.classList.add('ml-16');
+        sidebarToggle.textContent = '>';
+      } else {
+        sidebar.classList.remove('w-16');
+        sidebar.classList.add('w-64');
+        mainContent.classList.remove('ml-16');
+        mainContent.classList.add('ml-64');
+        sidebarToggle.textContent = '<';
+      }
+    });
+
+    // Responsive adjustments
+    function updateLayout() {
+      if (window.innerWidth < 768) { // Adjust breakpoint as needed
+        sidebar.classList.remove('w-64');
+        sidebar.classList.add('w-16');
+        mainContent.classList.remove('ml-64');
+        mainContent.classList.add('ml-16');
+        sidebarToggle.textContent = '>';
+      } else {
+        sidebar.classList.remove('w-16');
+        sidebar.classList.add('w-64');
+        mainContent.classList.remove('ml-16');
+        mainContent.classList.add('ml-64');
+        sidebarToggle.textContent = '<';
+      }
+    }
+
+    updateLayout(); // Initial layout
+    window.addEventListener('resize', updateLayout); // Update on resize
+
+  </script>
+</body>
+</html>

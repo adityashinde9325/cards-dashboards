@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+</head>
+
+<body class="bg-[#f8f9fd]">
+
+
+
+    <nav class="fixed top-0 left-0 w-full z-40 bg-[#fbfbfb] text-white ">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center md:justify-around justify-between mx-auto p-2">
+            <a href="" class="flex items-center justify-end space-x-3 rtl:space-x-reverse">
+                <img src="img/loog.jpg.png" class="h-8" alt="Flowbite Logo" />
+                <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#9b76ff] ">Digital cards</span> -->
+            </a>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <!-- User Profile Button -->
+            <div class="relative ">
+                <button id="userProfileBtn" class="flex items-center space-x-2">
+                    <img class="w-8 h-8 rounded-full" src="img/profile.jpg" alt="User Photo">
+                    <span class="text-gray-800 text-sm hidden md:inline">Bonnie Green</span>
+                    <svg class="w-4 h-4 text-gray-600 hidden md:inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                
+    
+                <!-- Dropdown Menu (Hidden by Default) -->
+                <div id="userDropdown"
+                    class="absolute right-0 mt-2 w-48 bg-white z-50 shadow-lg rounded-lg overflow-hidden hidden">
+                    <div class="p-3 border-b">
+                        <p class="text-sm font-semibold text-gray-800">Bonnie Green</p>
+                        <p class="text-xs text-gray-500">name@flowbite.com</p>
+                    </div>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit Profile</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help Center</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-100">Logout</a>
+                </div>
+            </div>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+                    id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                    </div>
+
+                </div>
+                <button id="sidebarToggle" data-collapse-toggle="navbar-user" type="button"
+                    class="inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="toggle-btn">
+
+            </div>
+        </div>
+    </nav>
+
+    <aside id="cta-button-sidebar"
+        class="fixed top-0 left-0 z-50 w-16 h-screen bg-[#fbfbfb] text-white transition-all duration-300 -translate-x-full md:translate-x-0 hover:w-20 md:hover:w-48 group">
+        <div class="h-full flex flex-col justify-between px-3 py-4 overflow-y-auto">
+            <ul class="space-y-2 font-medium">
+                <li>
+                    <a href="#" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                      
+                        <img class="w-6 h-6 text-gray-300 group-hover:text-white"  src="img/digitize-half.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="space-y-2">
+                    <a href="home.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/home.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Home</span>
+                    </a>
+                    <a href="cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/card.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Cards</span>
+                    </a>
+                    <a href="edit_cards.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/edit-cards.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Edit Card</span>
+                    </a>
+                    <a href="" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/chart.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Analytics</span>
+                    </a>
+
+                    <a href="leads.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/leads.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Leads</span>
+                    </a>
+                    <a href="share.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/send.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Share</span>
+                    </a>
+                    <a href="profile.html" class="flex items-center p-2 rounded-lg hover:bg-[#e7e7e7] group">
+                        <img class="shrink-0 w-5 h-5" src="./img/settings.png">
+                        <span class="ml-3 hidden group-hover:block text-[#000000]">Setting</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Logout Button at Bottom -->
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-red-100 group mb-4">
+                <img class="shrink-0 w-5 h-5" src="./img/logout.png">
+                <span class="ml-3 hidden group-hover:block text-[#000000]">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-1 md:ml-20 ml-0 mt-20 p-4 mb-10">
+        <h1 class="text-2xl font-semibold mb-4">Share Your Card</h1>
+    
+        <div class="w-full mx-auto bg-white p-6 rounded-2xl shadow">
+           
+    
+            <!-- Flex container for URL and QR Code -->
+            <div class="flex flex-col md:flex-row gap-6">
+                
+                <!-- URL Section -->
+                <div class="w-full md:w-1/2 ">
+                    
+                    <label for="cardUrl" class="block text-sm font-medium text-gray-700">Card URL</label>
+                    <div class="mt-1 flex rounded-2xl shadow-sm">
+                        <input type="text" name="cardUrl" id="cardUrl"
+                            class="flex-1 focus:ring-indigo-500 focus:border-indigo-500 rounded block ml-3 w-full min-w-0 rounded-none rounded-l-md sm:text-sm border-gray-300"
+                            value="https://your-digital-card.com/card/123" readonly>
+                        <button id="copyUrl"
+                            class="px-4 py-2 border border-gray-300 text-sm font-medium rounded-r-2xl text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                            <img class="shrink-0 w-5 h-5" src="img/copy-paste.png">
+                        </button>
+                    </div>
+                      <!-- Social Media Share Buttons -->
+            <div class="mt-6">
+                <label class="block text-sm font-medium text-gray-700">Share via Social Media</label>
+                <div class="mt-2 flex space-x-2">
+                    <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-4xl">Facebook</a>
+                    <a href="#" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-1 px-4 rounded-4xl">Twitter</a>
+                    <a href="#" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded-4xl">WhatsApp</a>
+                </div>
+            </div>
+                </div>
+    
+                <!-- QR Code Section -->
+                <div class="w-full md:w-1/2 flex flex-col items-center bg-[#fbfbfb] rounded-2xl py-4">
+                    <label class="block text-sm font-medium text-gray-700">QR Code</label>
+                    <div id="qrcode" class="mt-2"></div>
+                    <div class="flex gap-2 mt-2">
+                        <button id="viewQr"
+                            class="px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                            View QR
+                        </button>
+                
+                        <button id="downloadQr"
+                            class="px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                            Download QR
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+          
+        </div>
+        <!-- QR Code Modal -->
+<div id="qrModal" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96 text-center relative">
+        <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">&times;</button>
+        <h2 class="text-xl font-semibold mb-4">QR Code</h2>
+        <div id="qrPreview" class="flex justify-center"></div>
+    </div>
+</div>
+    
+        <!-- JavaScript -->
+        <script>
+            const cardUrl = document.getElementById('cardUrl').value;
+            const qrcodeDiv = document.getElementById('qrcode');
+            const qrPreviewDiv = document.getElementById('qrPreview');
+            const qrModal = document.getElementById('qrModal');
+            const closeModal = document.getElementById('closeModal');
+            const viewQrButton = document.getElementById('viewQr');
+            const downloadQrButton = document.getElementById('downloadQr');
+        
+            // Generate QR Code
+            const qr = qrcode(4, 'L');
+            qr.addData(cardUrl);
+            qr.make();
+            qrcodeDiv.innerHTML = qr.createImgTag(4);
+            qrPreviewDiv.innerHTML = qr.createImgTag(6); // Larger for modal view
+        
+            // View QR Modal
+            viewQrButton.addEventListener('click', () => {
+                qrModal.classList.remove('hidden');
+            });
+        
+            // Close Modal
+            closeModal.addEventListener('click', () => {
+                qrModal.classList.add('hidden');
+            });
+        
+            // Download QR Code
+            downloadQrButton.addEventListener('click', () => {
+                const qrImage = qrcodeDiv.querySelector('img');
+                const link = document.createElement('a');
+                link.href = qrImage.src;
+                link.download = 'card_qr.png';
+                link.click();
+            });
+        </script>
+    </main>
+    
+
+    
+
+
+
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[#fbfbfb] p-3 shadow-md">
+        <div class="w-full mx-auto flex items-center justify-between">
+            <!-- Left Side: Save Button (50%) -->
+            
+        </div>
+      
+    </footer>
+
+
+
+
+
+   
+
+<script src="script.js"> </script>
+</body>
+
+</html>
