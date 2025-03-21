@@ -8,69 +8,126 @@
     <link rel="stylesheet" href="output.css">
 </head>
 
-<body class="flex items-center justify-center  bg-gradient-to-r from-blue-200 via-blue-100 to-cyan-100 relative overflow-hidden px-4">
+<body class="flex items-center justify-center h-full w-full  relative overflow-hidden px-4 bg-cover bg-center bg-no-repeat" style="background-image: url('img/8270289.jpg');" >
 
     <!-- Background Gradient -->
-    <div class="absolute inset-0">
-        <div class="absolute w-72 h-72 bg-gradient-to-r from-blue-800 to-blue-600 rounded-full blur-3xl opacity-50 top-1/3 left-1/5"></div>
-        <div class="absolute w-72 h-72 bg-gradient-to-r from-cyan-800 to-rose-600 rounded-full blur-3xl opacity-50 bottom-1/4 right-1/4"></div>
-    </div>
+    
 
     <!-- Login Card -->
-    <div class="relative flex bg-white/20 backdrop-blur-lg rounded-3xl max-w-4xl w-full p-6 md:flex-row flex-col items-center justify-center shadow-lg">
+    <div class="relative my-10 flex bg-white/20 backdrop-blur-lg  rounded-3xl max-w-4xl w-full p-5  md:flex-row flex-col items-center justify-center shadow-lg">
 
         <!-- Left Section (Login Form) -->
-        <div class="w-full md:w-1/2 flex items-center justify-center p-6">
+        <div class="w-full md:w-1/2  flex items-center justify-center p-6">
             <div class="w-full">
-                <h2 class="text-2xl font-bold text-white text-center mb-6">Registration (Sign Up) Form</h2>
-                <form class="space-y-4">
-                    <div>
-                        <label class="block text-white text-sm font-semibold">Full Name</label>
-                        <input type="text" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
+                <h2 class="text-1xl md:text-2xl font-bold text-white text-center mb-6">Registration (Sign Up) Form</h2>
+                <form id="registrationForm" class="space-y-4">
+                    <div id="step1Fields">
+                        <div>
+                            <label class="block py-2 text-white text-sm font-semibold">Full Name</label>
+                            <input type="text" id="fullName" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
+                        </div>
+                        <div>
+                            <label class="block py-2 text-white text-sm font-semibold">Email Address</label>
+                            <input type="email" id="email" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
+                        </div>
+                        <div>
+                            <label class="block py-2 text-white text-sm font-semibold">Phone Number</label>
+                            <input type="tel" id="phoneNumber" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-white text-sm font-semibold">Username</label>
-                        <input type="text" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
+                    <div id="step2Fields" class="hidden">
+                        <div>
+                            <label class="block py-2 text-white text-sm font-semibold">Username</label>
+                            <input type="text" id="username" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
+                        </div>
+                        <div>
+                            <label class="block py-2 text-white text-sm font-semibold">Password</label>
+                            <input type="password" id="password" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
+                        </div>
+                        <div>
+                            <label class="block py-2 text-white text-sm font-semibold">Confirm Password</label>
+                            <input type="password" id="confirmPassword" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-white text-sm font-semibold">Email Address</label>
-                        <input type="text" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
+                    <div class="flex justify-between items-center mt-6">
+                        <button id="backButton" class=" w-24 bg-white text-blue-500 font-semibold py-2 rounded-3xl hover:bg-blue-100 transition hidden">
+                           back
+                        </button>
+                        <button id="nextButton" class=" w-24 bg-white text-blue-500 font-semibold py-2 rounded-3xl hover:bg-blue-100 transition">
+                           Next
+                        </button>
+                        <button type="submit" class="w-24 bg-white text-blue-500 font-semibold py-2 rounded-3xl hover:bg-blue-100 transition hidden">SIGN UP</button>
                     </div>
-                    <div>
-                        <label class="block text-white text-sm font-semibold"> Phone Number</label>
-                        <input type="text" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
-                    </div>
-                   
-                    <div>
-                        <label class="block text-white text-sm font-semibold">PASSWORD</label>
-                        <input type="password" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
-                    </div>
-                    <div>
-                        <label class="block text-white text-sm font-semibold">Confirm Password</label>
-                        <input type="password" class="w-full p-2 border border-white/50 bg-transparent text-white rounded-3xl focus:ring focus:ring-white/50">
-                    </div>
-                    <button class="w-full bg-white text-blue-500 font-semibold py-2 rounded-3xl hover:bg-blue-100 transition">SIGN UP</button>
-                    <p class="text-center text-white text-sm">Don't have an account? <a href="#" class="underline">Sign up</a></p>
+                    <p class="text-center text-white text-sm mt-6">Don't have an account? <a href="#" class="underline">Sign up</a></p>
                 </form>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const step1Fields = document.getElementById('step1Fields');
+                const step2Fields = document.getElementById('step2Fields');
+                const nextButton = document.getElementById('nextButton');
+                const backButton = document.getElementById('backButton');
+                const registrationForm = document.getElementById('registrationForm');
+                const submitButton = document.querySelector('button[type="submit"]');
+                let currentStep = 1;
+    
+                nextButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    if (currentStep === 1) {
+                        step1Fields.classList.add('hidden');
+                        step2Fields.classList.remove('hidden');
+                        backButton.classList.remove('hidden');
+                        nextButton.classList.add('hidden');
+                        submitButton.classList.remove('hidden');
+                        currentStep = 2;
+                    }
+                });
+    
+                backButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    if (currentStep === 2) {
+                        step2Fields.classList.add('hidden');
+                        step1Fields.classList.remove('hidden');
+                        backButton.classList.add('hidden');
+                        nextButton.classList.remove('hidden');
+                        submitButton.classList.add('hidden');
+                        currentStep = 1;
+                    }
+                });
+    
+                registrationForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // Handle form submission here
+                    console.log("Form submitted!");
+                    if(currentStep === 1){
+                        console.log("fullName: ", document.getElementById('fullName').value)
+                        console.log("email: ", document.getElementById('email').value)
+                        console.log("phoneNumber: ", document.getElementById('phoneNumber').value)
+                    }else{
+                        console.log("username: ", document.getElementById('username').value)
+                        console.log("password: ", document.getElementById('password').value)
+                        console.log("confirmPassword: ", document.getElementById('confirmPassword').value)
+                    }
+                });
+            });
+        </script>
 
         <!-- Right Section (Illustration) -->
-        <div class="w-full md:w-1/2 flex items-center justify-center p-6">
-            <div class="bg-white/30 backdrop-blur-lg rounded-3xl p-6 flex flex-col items-center justify-center w-full h-full">
+        <div class="w-full relative md:w-1/2 flex items-center justify-center p-6">
+            <div class="h-20 w-20 bg-blue-400 absolute top-4 right-3 rounded-[20px]"> </div>
+            <div class="h-20 w-20 bg-blue-400 absolute bottom-3 left-2 rounded-[20px]"> </div>
+            <div class="bg-white/30 backdrop-blur-lg   rounded-3xl p-6 flex flex-col items-center justify-center w-full h-full">
                 <img src="./img/login-svg-1.png" alt="Lock Icon" class="w-40 md:w-60 mx-auto opacity-80">
                 <div class="mt-6 md:mt-10 text-center">
                     <img src="./img/loog.jpg.png" class="max-w-full h-auto">
-                    <p class="text-[#a6ecee] text-center mt-2">digitizecards.com</p>
+                    <p class="text-dark text-center mt-2">digitizecards.com</p>
                 </div>
             </div>
         </div>
 
     </div>
-    <div class=" flex-col md:flex-row ">
-        <div class="h-98 bg-blue-400">12</div>
-        <div class="h-98 bg-blue-400">13</div>
-    </div>
+    
 
 </body>
 </html>
